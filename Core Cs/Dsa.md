@@ -1,11 +1,11 @@
 # DSA
 My personal Recommendation: Study Each part of the module individually by copy pasting the topic name.
 
--[Code with Harry](https://youtube.com/playlist?list=PLu0W_9lII9ahIappRPN0MCAgtOu3lQjQi&si=0JqXkOB17k3CLf6j)
+- [Code with Harry](https://youtube.com/playlist?list=PLu0W_9lII9ahIappRPN0MCAgtOu3lQjQi&si=0JqXkOB17k3CLf6j)
 
--[Jenny's Lectures](https://youtube.com/playlist?list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU&si=rFSpheELD0D55cxH) //but asymptotic notations and pehle ke cheze... Harry/Abdul Bari se dekh lena)
+- [Jenny's Lectures](https://youtube.com/playlist?list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU&si=rFSpheELD0D55cxH) //but asymptotic notations and pehle ke cheze... Harry/Abdul Bari se dekh lena)
 
--[Neso](https://youtube.com/playlist?list=PLBlnK6fEyqRj9lld8sWIUNwlKfdUoPd1Y&si=SLGYHb4O0lqL5e3s)
+- [Neso](https://youtube.com/playlist?list=PLBlnK6fEyqRj9lld8sWIUNwlKfdUoPd1Y&si=SLGYHb4O0lqL5e3s)
 
 -[GL](https://youtu.be/MtVZAXepMPM?si=HYhKJt2R_RJeiewd)
 
