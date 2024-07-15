@@ -1,5 +1,5 @@
 # DSA
-
+# My personal Recommendation: Study Each part of the module individually by copy pasting the topic name.
 
 -[Code with Harry](https://youtube.com/playlist?list=PLu0W_9lII9ahIappRPN0MCAgtOu3lQjQi&si=0JqXkOB17k3CLf6j)
 
