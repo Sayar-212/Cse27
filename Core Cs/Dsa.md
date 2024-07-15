@@ -7,6 +7,6 @@ My personal Recommendation: Study Each part of the module individually by copy p
 
 - [Neso](https://youtube.com/playlist?list=PLBlnK6fEyqRj9lld8sWIUNwlKfdUoPd1Y&si=SLGYHb4O0lqL5e3s)
 
--[GL](https://youtu.be/MtVZAXepMPM?si=HYhKJt2R_RJeiewd)
+- [GL](https://youtu.be/MtVZAXepMPM?si=HYhKJt2R_RJeiewd)
 
--[Abdul Bari](https://youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&si=6SwVI3UpYYwgWTXf) (mostly lab ka portion ho jayga)
+- [Abdul Bari](https://youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&si=6SwVI3UpYYwgWTXf) (mostly lab ka portion ho jayga)
