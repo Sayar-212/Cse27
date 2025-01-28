@@ -1,0 +1,125 @@
+package server1;
+
+import java.net.*;
+import java.io.*;
+import java.util.*;
+class ClientHandler implements Runnable {
+    private Socket clientSocket;
+
+    public ClientHandler(Socket clientSocket) {
+        this.clientSocket = clientSocket;
+    }
+
+    public void run() {
+        try {
+            OutputStream out = clientSocket.getOutputStream();
+            DataOutputStream dos = new DataOutputStream(out);
+            dos.writeUTF("Hi Sayar");
+            dos.close();
+            out.close();
+            clientSocket.close();
+        } catch (IOException e) {
+            System.out.println("Error handling client: " + e.getMessage());
+        }
+    }
+}
+
+class ServerManager implements Runnable {
+    private ServerSocket serverSocket;
+    private volatile boolean running;
+
+    public ServerManager(ServerSocket serverSocket) {
+        this.serverSocket = serverSocket;
+        this.running = true;
+    }
+
+    public void run() {
+        try {
+            Scanner sc = new Scanner(System.in);
+            while (running) {
+                System.out.println("Press 5 to exit the server");
+                int input = sc.nextInt();
+                if (input == 5) {
+                    running = false;
+                    System.out.println("Server Closing...");
+                }
+            }
+            serverSocket.close();
+        } catch (IOException e) {
+            System.out.println("Error in server management: " + e.getMessage());
+        }
+    }
+
+    public boolean isRunning() {
+        return running;
+    }
+}
+
+public class Server1 {
+    public static void main(String[] args) {
+        int port = 2000;
+        try {
+            ServerSocket serverSocket = new ServerSocket(port);
+            int clientCount = 0;
+            System.out.println("Server started on port " + port);
+            Thread serverManagerThread = new Thread(new ServerManager(serverSocket));
+            serverManagerThread.start();
+
+            while (true) {
+                if (!serverSocket.isClosed()) {
+                    try {
+                        Socket clientSocket = serverSocket.accept();
+                        clientCount++;
+                        System.out.println("Client " + clientCount + " connected.");
+                        Thread clientThread = new Thread(new ClientHandler(clientSocket));
+                        clientThread.start();
+                    } catch (IOException e) {
+                        if (serverSocket.isClosed()) {
+                            System.out.println("Server has stopped accepting connections.");
+                            break; 
+                        } else {
+                            System.out.println("Error accepting client connection: " + e.getMessage());
+                        }
+                    }
+                } else {
+                    break; 
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("Error starting the server: " + e.getMessage());
+        }
+    }
+}
+
+
+Server
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package client1;
+
+/**
+ *
+ * @author usernet
+ */
+import java.net.*;
+import java.io.*;
+public class Client1{
+    public static void main(String args[]) throws IOException {
+        Socket s1 = new Socket("localhost",2000);
+        InputStream s1In = s1.getInputStream();
+        DataInputStream dis = new DataInputStream(s1In);
+        String st = new String(dis.readUTF());
+        System.out.println(st);
+        dis.close();
+        s1In.close();
+        s1.close(); 
+        
+    }
+}
+
+Client
